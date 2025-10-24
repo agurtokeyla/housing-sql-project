@@ -20,26 +20,10 @@ The project demonstrates beginner-level SQL skills, data modeling, and real-worl
 
 ---
 
-## 🗂️ Database Schema
+## 🧭 Entity Relationship Diagram (ERD)
 
-**Tables:**
-1. **cities**
-   - `city_id` INTEGER PRIMARY KEY  
-   - `city_name` TEXT  
-   - `state` TEXT  
-   - `region` TEXT  
+![Housing ERD](erd_housing_project.png)
 
-2. **neighborhoods**
-   - `nbh_id` INTEGER PRIMARY KEY  
-   - `city_id` INTEGER (links to `cities.city_id`)  
-   - `nbh_name` TEXT  
-
-3. **rent_stats**
-   - `stat_id` INTEGER PRIMARY KEY  
-   - `nbh_id` INTEGER (links to `neighborhoods.nbh_id`)  
-   - `year_month` TEXT ('YYYY-MM')  
-   - `median_rent` REAL  
-   - `median_income` REAL  
 
 ---
 
