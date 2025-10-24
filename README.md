@@ -70,7 +70,11 @@ JOIN neighborhoods n ON r.nbh_id = n.nbh_id
 JOIN cities c ON n.city_id = c.city_id
 ORDER BY rent_burden_ratio DESC;
 
-#2️⃣ Flag Cost-Burdened Neighborhoods 
+```
+
+
+### 2️⃣ Flag Cost-Burdened Neighborhoods
+```sql
 SELECT
   c.city_name,
   n.nbh_name,
@@ -83,7 +87,10 @@ JOIN neighborhoods n ON r.nbh_id = n.nbh_id
 JOIN cities c ON n.city_id = c.city_id
 ORDER BY status DESC;
 
-###3️⃣ Average Rent Burden by City
+```
+
+### 3️⃣ Average Rent Burden by City
+```sql
 SELECT
   c.city_name,
   ROUND(AVG(r.median_rent / (r.median_income/12.0)), 3) AS avg_rent_burden
@@ -93,8 +100,10 @@ JOIN cities c ON n.city_id = c.city_id
 GROUP BY c.city_name
 ORDER BY avg_rent_burden DESC;
 
+```
 
-##4️⃣ Month-to-Month Rent Change
+### 4️⃣ Month-to-Month Rent Change
+```sql
 WITH ranked AS (
   SELECT
     r.*,
