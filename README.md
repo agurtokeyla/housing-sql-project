@@ -106,3 +106,24 @@ JOIN ranked prev ON cur.nbh_id = prev.nbh_id AND cur.rn = prev.rn + 1
 JOIN neighborhoods n ON cur.nbh_id = n.nbh_id
 JOIN cities c ON n.city_id = c.city_id
 ORDER BY change DESC;
+
+```
+## 🪞 Reflection
+
+Working on this project was an eye-opening experience that helped me connect the pieces between SQL concepts, database design, and real-world problem-solving. While creating the tables and relationships was straightforward, I found it challenging to **link everything together** correctly, especially when it came to understanding **how foreign keys connect data across multiple tables**. I had to spend time reviewing how `JOIN` statements work and how to properly structure data relationships so they produce meaningful results.
+
+Another area that took practice was understanding **the logic behind each query**, not just writing SQL syntax, but really thinking through what each command was doing. For example, calculating rent burden ratios required converting annual income into monthly values, which taught me how SQL can handle mathematical expressions and derived columns.
+
+I also learned how important it is to keep the database schema consistent and well-labeled. At first, I struggled with naming conventions and formatting, but once I switched to using **snake_case** and added clear primary/foreign keys, everything became more organized and readable.
+
+Overall, this project helped me:
+- Strengthen my understanding of SQL joins and relationships.
+- Practice building a normalized database from scratch.
+- Learn to troubleshoot small but important details — like making sure connections between tables actually work.
+- Build confidence using **VS Code**, **SQLite**, and **GitHub** together in one workflow.
+
+Going forward, I want to improve my ability to:
+- Design more complex queries that combine multiple analytical functions.
+- Automate data visualization by connecting SQL results to Power BI or Python.
+- Document my process more clearly so others can follow my logic step-by-step.
+
